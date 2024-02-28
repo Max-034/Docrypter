@@ -1,0 +1,19 @@
+.title {
+    text-align: center; 
+    color: #ff0000; 
+    font-size: 30px; 
+    margin-top: 50px; 
+    
+}
+
+.ai {
+    text-align: center; 
+    color: white; 
+    font-size: 40px; 
+    margin-top: 50px;
+
+}
+
+.bg {
+    background-color: black;
+}

@@ -1,0 +1,17 @@
+{% extends "template.html" %}
+
+{% block main %}
+
+<form class = "ai" action="/login" method="post">
+    <div class="mb-3">
+        <input autocomplete="off" autofocus class="ai" id="username" name="username" placeholder="Username" type="text">
+    </div>
+    <div class="mb-3">
+        <input class="ai" id="password" name="password" placeholder="Password" type="password">
+    </div>
+    <button class="btn btn-primary" type="submit">Log In</button>
+</form>
+
+<p class = "ai"><a href = "http://127.0.0.1:5000/google-login">Login with google</a></p>
+
+{% endblock %}

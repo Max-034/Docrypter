@@ -1,0 +1,39 @@
+{% extends "template.html" %}
+
+{% block main %}
+<div class = "title">
+    <span>Doc</span>
+    <span class = "ai">C</span>
+    <span>rypter</span>
+  
+</div>
+
+<form class = "ai" action="/" method="post" enctype="multipart/form-data">
+    <label for="pd">Select PDF file:</label><br>
+    <input type="file" id="pd" name="pd" accept=".pdf"><br><br>
+
+    <label for="text">Enter password:</label><br>
+    <input type="text" id="pass" name="pass"><br><br>
+    <button type="submit">Upload</button>
+</form>
+
+<form  class = "ai" action="/download">
+    <button type="submit">Download</button>
+</form>
+
+
+
+    <p><a href ='http://127.0.0.1:5000/logout'>Logout</a> </p>
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
