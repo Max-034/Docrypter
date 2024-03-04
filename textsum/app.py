@@ -38,12 +38,12 @@ appConf = {
 }
 
 def render_template(template_name , context = {}):
-    file_loader = FileSystemLoader('/Users/max/Desktop/Coding/textsum/stat')
+    file_loader = FileSystemLoader('textsum/templates')
     env = Environment(loader=file_loader)
     template = env.get_template(template_name)
     return template.render(context)
 
-app = Flask(__name__)
+app = Flask(__name__ , template_folder='templates')
 oauth = OAuth(app)
 oauth.register("mapp" , client_id=appConf.get("OAUTH2_CLIENT_ID"),
     client_secret=appConf.get("OAUTH2_CLIENT_SECRET"),
