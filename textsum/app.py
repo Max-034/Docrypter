@@ -16,13 +16,13 @@ import supabase
 from io import BytesIO
 
 
-from flask_login import (
-    LoginManager,
-    current_user,
-    login_required,
-    login_user,
-    logout_user,
-)
+# from flask_login import (
+#     LoginManager,
+#     current_user,
+#     login_required,
+#     login_user,
+#     logout_user,
+# )
 
 url: str = os.environ.get("SURL")
 key: str = os.environ.get("SKEY")
@@ -37,11 +37,11 @@ appConf = {
     "FLASK_PORT": 5000
 }
 
-def render_template(template_name , context = {}):
-    file_loader = FileSystemLoader('textsum/templates')
-    env = Environment(loader=file_loader)
-    template = env.get_template(template_name)
-    return template.render(context)
+# def render_template(template_name , context = {}):
+#     file_loader = FileSystemLoader('textsum/templates')
+#     env = Environment(loader=file_loader)
+#     template = env.get_template(template_name)
+#     return template.render(context)
 
 app = Flask(__name__ , template_folder='templates')
 oauth = OAuth(app)
@@ -58,10 +58,10 @@ app.secret_key = b'parth'
 
 app.config['DEBUG'] = True
 
-login_manager = LoginManager()
-login_manager.init_app(app)
+# login_manager = LoginManager()
+# login_manager.init_app(app)
 
-login_manager.login_view = '/google-login'
+# login_manager.login_view = '/google-login'
 
 def login_required(f):
     @wraps(f)
